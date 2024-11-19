@@ -1,0 +1,83 @@
+@use "./mixins.scss";
+
+:root {
+  --color-text: #fafafa;
+  --color-background: #181818;
+  --color-background-light: #414141;
+  --main-color: #ffdd7c;
+  --shadow-color: #1c8ef1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding: 0 2rem;
+  margin: 0 auto;
+
+  font-family: montserrat, sans-serif;
+  line-height: 1.5;
+  background-color: var(--color-background);
+  color: var(--color-text);
+
+  @include mixins.desktop {
+    width: 900px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+h1 {
+  color: var(--main-color);
+  text-shadow: 2px 2px 0px var(--shadow-color);
+}
+
+strong {
+  color: var(--main-color);
+
+  code {
+    color: var(--shadow-color);
+  }
+}
+
+hr {
+  border: none;
+  background-color: #9b9c9d;
+  height: 1px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include mixins.desktop {
+    width: 80%;
+  }
+}

@@ -1,0 +1,46 @@
+@use "@/styles/mixins";
+
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 3rem 0;
+  gap: 2rem;
+
+  .skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    overflow: hidden;
+    width: 40px;
+    overflow: visible;
+
+    strong {
+      font-size: 0.8rem;
+    }
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@include mixins.tablet {
+  .skillsGrid {
+    max-width: 90%;
+    .skill {
+      width: 50px;
+    }
+  }
+}
+
+@include mixins.desktop {
+  .skillsGrid {
+    max-width: 80%;
+    .skill {
+      width: 60px;
+    }
+  }
+}

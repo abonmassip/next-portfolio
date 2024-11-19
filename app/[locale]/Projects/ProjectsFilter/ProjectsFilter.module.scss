@@ -1,0 +1,58 @@
+@keyframes shadowAnimation {
+  0% {
+    text-shadow: 0px 0px 0px var(--shadow-color);
+  }
+  100% {
+    text-shadow: 3px 3px 0px var(--shadow-color);
+  }
+}
+
+.filtersContainer {
+  padding: 1rem 0;
+  .filtersList {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+
+    button {
+      font-weight: bold;
+      color: var(--main-color);
+
+      &:hover {
+        color: var(--shadow-color);
+      }
+
+      &.selected {
+        text-shadow: 2px 2px 0px var(--shadow-color);
+        &:hover {
+          color: var(--main-color);
+        }
+      }
+    }
+  }
+
+  .clearButton {
+    text-align: center;
+
+    button {
+      font-weight: bold;
+      opacity: 0.2;
+      pointer-events: none;
+      padding: 0.3rem;
+
+      &.active {
+        pointer-events: all;
+        opacity: 1;
+        color: var(--main-color);
+        animation: shadowAnimation 0.5s ease-in-out 0s infinite alternate;
+
+        &:hover {
+          color: var(--shadow-color);
+          animation: none;
+        }
+      }
+    }
+  }
+}

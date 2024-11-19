@@ -1,0 +1,68 @@
+@use "@/styles/mixins";
+
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    padding-top: 1rem;
+
+    .avatar {
+      border-radius: 9999px;
+      overflow: hidden;
+      width: 120px;
+      aspect-ratio: 1 / 1;
+      position: relative;
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    .description {
+      text-align: center;
+
+      a {
+        text-decoration: underline;
+
+        &:hover {
+          color: var(--main-color);
+        }
+      }
+    }
+  }
+  .link {
+    font-weight: bold;
+    color: var(--main-color);
+
+    &:hover {
+      color: var(--shadow-color);
+    }
+  }
+
+  @include mixins.desktop {
+    .profile {
+      flex-direction: row;
+
+      .avatar {
+        width: 80%;
+        margin: 1rem;
+      }
+
+      .description {
+        text-align: inherit;
+      }
+    }
+  }
+}

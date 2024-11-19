@@ -1,0 +1,88 @@
+@use "@/styles/mixins";
+
+.navContainer {
+  position: sticky;
+  position: -webkit-sticky;
+  z-index: 999;
+  top: 0;
+  background-color: var(--color-background);
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-bottom: 1px solid var(--main-color);
+  text-wrap: nowrap;
+
+  a {
+    color: var(--main-color);
+
+    &:hover {
+      color: var(--shadow-color);
+    }
+
+    &.active {
+      text-shadow: 1px 1px 0px var(--shadow-color);
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+
+      &:hover {
+        color: var(--main-color);
+      }
+    }
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .resume {
+    background-color: var(--main-color);
+    color: #000;
+    padding: 0.2rem 0.6rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.5 ease-in-out;
+    display: inline-block;
+
+    &:hover {
+      box-shadow: 4px 4px 0px var(--shadow-color);
+      color: #000;
+    }
+
+    .short {
+      display: inherit;
+    }
+    .long {
+      display: none;
+    }
+  }
+}
+
+@include mixins.tablet {
+  .navContainer {
+    font-size: 1.2rem;
+    justify-content: space-around;
+
+    .resume {
+      .short {
+        display: none;
+      }
+      .long {
+        display: inherit;
+      }
+    }
+  }
+}
+
+@include mixins.desktop {
+  .navContainer {
+    height: 4rem;
+  }
+}

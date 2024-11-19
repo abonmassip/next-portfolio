@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "line1": "Albert Bonmassip",
+    "line2": "Front-end Developer",
+    "link": "Enter"
+  },
+  "navbar": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "about": {
+    "title": "About me",
+    "projectsLink": "My projects"
+  },
+  "projects": {
+    "title": "Projects",
+    "clearFilter": "clear selection",
+    "visit": "Visit the site",
+    "noMatch": "I have no projects matching this criteria"
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send",
+    "sending": "Sending...",
+    "success": "Message submitted successfully!",
+    "error": "Error",
+    "top": "Back to top!"
+  }
+}

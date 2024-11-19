@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "line1": "Albert Bonmassip",
+    "line2": "Desenvolupador Front-end",
+    "link": "Entra"
+  },
+  "navbar": {
+    "about": "Sobre mi",
+    "projects": "Projectes",
+    "contact": "Contacte",
+    "resume": "Currículum"
+  },
+  "about": {
+    "title": "Sobre mi",
+    "projectsLink": "Els meus projectes"
+  },
+  "projects": {
+    "title": "Projectes",
+    "clearFilter": "esborra la selecció",
+    "visit": "Visita el web",
+    "noMatch": "No tinc projectes que compleixin aquests requisits"
+  },
+  "contact": {
+    "title": "Contacte",
+    "name": "Nom",
+    "email": "Email",
+    "message": "Missatge",
+    "submit": "Enviar",
+    "sending": "Enviant...",
+    "success": "Missatge enviat correctament!",
+    "error": "Error",
+    "top": "Torna a dalt!"
+  }
+}
