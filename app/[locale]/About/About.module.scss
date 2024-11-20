@@ -1,6 +1,6 @@
 @use "@/styles/mixins";
 
-.aboutMe {
+.about {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,18 +10,32 @@
     margin-bottom: 1rem;
   }
 
+  .languages {
+    align-self: flex-end;
+  }
+
   .profile {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
 
-    padding-top: 1rem;
+    .name {
+      padding: 2rem 0;
+      text-align: center;
+      * {
+        margin: 0;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
 
     .avatar {
+      margin: 1rem;
       border-radius: 9999px;
       overflow: hidden;
-      width: 120px;
+      height: 120px;
       aspect-ratio: 1 / 1;
       position: relative;
 
@@ -31,13 +45,11 @@
     }
 
     .description {
-      text-align: center;
-
       a {
         text-decoration: underline;
 
-        &:hover {
-          color: var(--main-color);
+        @include mixins.hover {
+          background-color: var(--color-background-light);
         }
       }
     }
@@ -46,22 +58,15 @@
     font-weight: bold;
     color: var(--main-color);
 
-    &:hover {
-      color: var(--shadow-color);
+    @include mixins.hover {
+      background-color: var(--color-background-light);
     }
   }
 
-  @include mixins.desktop {
+  @include mixins.tablet {
     .profile {
-      flex-direction: row;
-
-      .avatar {
-        width: 80%;
-        margin: 1rem;
-      }
-
-      .description {
-        text-align: inherit;
+      .name h1 {
+        font-size: 3rem;
       }
     }
   }

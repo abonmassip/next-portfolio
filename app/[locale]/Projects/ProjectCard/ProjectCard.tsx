@@ -1,15 +1,16 @@
 "use client";
 import Image from "next/image";
-import { SiGithub } from "react-icons/si";
 
 import styles from "./ProjectCard.module.scss";
+import Link from "next/link";
 
 type ProjectCard = {
   id: string;
   title: string;
   text: string;
   links: { [key: string]: string };
-  visitMessage: string;
+  enterButtonText: string;
+  codeButtonText: string;
 };
 
 export default function ProjectCard({
@@ -17,10 +18,11 @@ export default function ProjectCard({
   title,
   text,
   links,
-  visitMessage,
+  enterButtonText,
+  codeButtonText,
 }: ProjectCard) {
   return (
-    <div key={id} className={styles.projectCard}>
+    <div className={styles.projectCard}>
       <div className={styles.projectImage}>
         <Image src={`/images/${id}.jpg`} alt={id} fill />
       </div>
@@ -30,25 +32,15 @@ export default function ProjectCard({
         dangerouslySetInnerHTML={{ __html: text }}
       />
       <div className={styles.projectCardFooter}>
-        {links.live ? (
-          <a
-            className={styles.enter}
-            href={links.live}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {visitMessage}
-          </a>
-        ) : null}
+        {links.live && (
+          <Link href={links.live} className={styles.visit} target="_blank">
+            {enterButtonText}
+          </Link>
+        )}
         {links.code ? (
-          <a
-            className={styles.github}
-            href={links.code}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <SiGithub />
-          </a>
+          <Link href={links.code} className={styles.visit} target="_blank">
+            {codeButtonText}
+          </Link>
         ) : null}
       </div>
     </div>

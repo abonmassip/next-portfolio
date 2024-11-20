@@ -9,7 +9,7 @@ import styles from "./Navbar.module.scss";
 const Navbar = () => {
   const locale = useLocale() as LocalesType;
   const t = useTranslations("navbar");
-  const [currentSection, setCurrentSection] = useState("");
+  const [currentSection, setCurrentSection] = useState("about");
 
   const onScroll = useCallback(() => {
     const sections = document.querySelectorAll("section");
@@ -39,33 +39,35 @@ const Navbar = () => {
   }, [currentSection, onScroll]);
 
   return (
-    <div className={styles.navContainer}>
-      <Link
-        href="#aboutme"
-        className={currentSection === "aboutme" ? styles.active : ""}
-      >
-        {t("about")}
-      </Link>
-      <Link
-        href="#projects"
-        className={currentSection === "projects" ? styles.active : ""}
-      >
-        {t("projects")}
-      </Link>
-      <Link
-        href="#contact"
-        className={currentSection === "contact" ? styles.active : ""}
-      >
-        {t("contact")}
-      </Link>
-      <a
-        className={styles.resume}
-        href={`/AlbertBonmassip_CV-${locale}.pdf`}
-        target="_blank"
-      >
-        <span className={styles.long}>{t("resume")}</span>
-        <span className={styles.short}>CV</span>
-      </a>
+    <div className={styles.navBg}>
+      <div className={styles.navContainer}>
+        <Link
+          href="#about"
+          className={currentSection === "about" ? styles.active : ""}
+        >
+          {t("about")}
+        </Link>
+        <Link
+          href="#projects"
+          className={currentSection === "projects" ? styles.active : ""}
+        >
+          {t("projects")}
+        </Link>
+        <Link
+          href="#contact"
+          className={currentSection === "contact" ? styles.active : ""}
+        >
+          {t("contact")}
+        </Link>
+        <a
+          className={styles.resume}
+          href={`/AlbertBonmassip_CV-${locale}.pdf`}
+          target="_blank"
+        >
+          <span className={styles.long}>{t("resume")}</span>
+          <span className={styles.short}>CV</span>
+        </a>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,19 @@
+@use "@/styles/mixins";
+
+.languages {
+  top: 1rem;
+  display: flex;
+  gap: 1rem;
+  color: var(--main-color);
+
+  a {
+    @include mixins.hover {
+      background-color: var(--color-background-light);
+    }
+  }
+
+  .active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}

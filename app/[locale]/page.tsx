@@ -1,15 +1,11 @@
+import { LocalesType } from "@/i18n/routing";
+import { setRequestLocale } from "next-intl/server";
 import { getProjectsData } from "@/lib/getProjects";
 import { getPageData } from "@/lib/getPages";
 
-import { LocalesType } from "@/i18n/routing";
-import { setRequestLocale } from "next-intl/server";
-
 import Projects from "./Projects/Projects";
-import Hero from "./Hero/Hero";
-import Navbar from "../../components/Navbar/Navbar";
-import AboutMe from "./AboutMe/AboutMe";
+import About from "./About/About";
 import Contact from "./Contact/Contact";
-// import ReturnButton from "../../components/ReturnButton/ReturnButton";
 
 import styles from "./page.module.scss";
 
@@ -24,12 +20,9 @@ export default async function Home({ params }: { params: Params }) {
 
   return (
     <main className={styles.page}>
-      <Hero />
-      <Navbar />
-      <AboutMe aboutData={aboutData} />
+      <About aboutData={aboutData} />
       <Projects projectsData={projectsData} />
       <Contact />
-      {/* <ReturnButton /> */}
     </main>
   );
 }

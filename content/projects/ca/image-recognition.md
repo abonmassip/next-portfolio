@@ -9,4 +9,4 @@ links:
   }
 ---
 
-Aplicació en **`React`** que detecta cares en imatges amb l'API de [Clarifai](https://www.clarifai.com/). Servidor backend **`Express.js`**, base de dades **`PostgreSQL`** pel registre d'usuaris, **`bcrypt`** per emmagatzemar les contrasenyes de manera segura i **`Tachyons`** per a l'estil CSS.
+Aplicació en **`React`** que detecta cares en imatges amb l'API de Clarifai. Servidor backend **`Express.js`**, base de dades **`PostgreSQL`** pel registre d'usuaris, **`bcrypt`** per emmagatzemar les contrasenyes de manera segura i **`Tachyons`** per a l'estil CSS.

@@ -1,9 +1,10 @@
 "use client";
-import SocialIcons from "@/components/SocialIcons/SocialIcons";
-import styles from "./Contact.module.scss";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import ArrowButton from "@/components/ArrowButton/ArrowButton";
+
+import SocialIcons from "@/components/SocialIcons/SocialIcons";
+
+import styles from "./Contact.module.scss";
 
 export default function Contact() {
   const t = useTranslations("contact");
@@ -51,11 +52,6 @@ export default function Contact() {
         </form>
         <span>{result}</span>
       </div>
-
-      <a className={styles.link} href="#hero">
-        <ArrowButton direction="up" />
-        {t("top")}
-      </a>
 
       <div className={styles.footer}>
         <br />

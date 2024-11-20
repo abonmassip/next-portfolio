@@ -7,8 +7,6 @@ import { type Project } from "@/lib/getProjects";
 import ProjectsFilter from "./ProjectsFilter/ProjectsFilter";
 
 import styles from "./Projects.module.scss";
-import Link from "next/link";
-import ArrowButton from "@/components/ArrowButton/ArrowButton";
 
 export default function Projects({
   projectsData,
@@ -42,7 +40,8 @@ export default function Projects({
             <ProjectCard
               key={project.id}
               {...project}
-              visitMessage={t("visit")}
+              enterButtonText={t("visit")}
+              codeButtonText={t("code")}
             />
           ))
         ) : (
@@ -51,9 +50,6 @@ export default function Projects({
           </div>
         )}
       </div>
-      <Link href="#contact" className={styles.link}>
-        <ArrowButton direction="down" />
-      </Link>
     </section>
   );
 }

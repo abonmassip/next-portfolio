@@ -5,7 +5,8 @@
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 3rem 0;
-  gap: 2rem;
+  gap: 3rem;
+  max-width: 90%;
 
   .skill {
     display: flex;
@@ -14,11 +15,12 @@
     align-items: center;
     gap: 0.5rem;
     overflow: hidden;
-    width: 40px;
+    width: 30px;
     overflow: visible;
 
     strong {
       font-size: 0.8rem;
+      color: #fff;
     }
     svg {
       width: 100%;
@@ -29,9 +31,8 @@
 
 @include mixins.tablet {
   .skillsGrid {
-    max-width: 90%;
     .skill {
-      width: 50px;
+      width: 40px;
     }
   }
 }
@@ -40,7 +41,7 @@
   .skillsGrid {
     max-width: 80%;
     .skill {
-      width: 60px;
+      width: 50px;
     }
   }
 }

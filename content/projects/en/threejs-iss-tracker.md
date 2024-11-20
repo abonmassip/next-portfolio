@@ -9,4 +9,4 @@ links:
   }
 ---
 
-Interactive 3D experience made in **`Three.js`** using the API [wheretheiss.at](https://wheretheiss.at/w/developer) to locate the ISS in real time. **`Custom Shaders`** to recreate the atmosphere and day/night Earth texture effects. **`GSAP`** for animations and **`lil-gui`** for debug menu adding `#debug` to the URL.
+Interactive 3D experience made in **`Three.js`** using the API wheretheiss.at to locate the ISS in real time. **`Custom Shaders`** to recreate the atmosphere and day/night Earth texture effects. **`GSAP`** for animations and **`lil-gui`** for debug menu adding `#debug` to the URL.

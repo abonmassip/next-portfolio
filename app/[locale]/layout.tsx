@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.scss";
 import { LocalesType } from "@/i18n/routing";
 import { Montserrat } from "next/font/google";
+import Navbar from "@/components/Navbar/Navbar";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={montserrat.className}>
         <NextIntlClientProvider messages={messages}>
+          <Navbar />
           {children}
         </NextIntlClientProvider>
       </body>

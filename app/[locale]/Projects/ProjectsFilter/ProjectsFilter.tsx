@@ -1,6 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import {
+  MdCheckBoxOutlineBlank as IconInactive,
+  MdIndeterminateCheckBox as IconActive,
+} from "react-icons/md";
 
 import { Project } from "@/lib/getProjects";
 
@@ -47,15 +51,17 @@ const ProjectsFilter = ({
       <div className={styles.filtersList}>
         {filterList.map((tech) => (
           <button
+            className={`${styles.filterButton} ${
+              selectedFilter.includes(tech) ? styles.selected : ""
+            }`}
             key={tech}
             onClick={() => handleFilterSelect(tech)}
-            className={selectedFilter.includes(tech) ? styles.selected : ""}
           >
             {tech}
+            {selectedFilter.includes(tech) ? <IconActive /> : <IconInactive />}
           </button>
         ))}
       </div>
-
       <div className={styles.clearButton}>
         <button
           onClick={resetFilters}

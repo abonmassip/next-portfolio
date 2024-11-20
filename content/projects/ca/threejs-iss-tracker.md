@@ -9,4 +9,4 @@ links:
   }
 ---
 
-Experiència 3D interactiva amb **`Three.js`**, utilitzant l'API [wheretheiss.at](https://wheretheiss.at/w/developer) per localitzar l'Estació Espacial Internacional a temps real. **`Shaders personalitzats`** per l'atmosfera i l'efecte dia/nit a la textura de la terra. **`GSAP`** per les animacions i **`lil-gui`** pel menú de depuració afegint `#debug` a la URL.
+Experiència 3D interactiva amb **`Three.js`**, utilitzant l'API wheretheiss.at per localitzar l'Estació Espacial Internacional a temps real. **`Shaders personalitzats`** per l'atmosfera i l'efecte dia/nit a la textura de la terra. **`GSAP`** per les animacions i **`lil-gui`** pel menú de depuració afegint `#debug` a la URL.

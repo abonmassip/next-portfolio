@@ -1,9 +1,4 @@
 {
-  "hero": {
-    "line1": "Albert Bonmassip",
-    "line2": "Desenvolupador Front-end",
-    "link": "Entra"
-  },
   "navbar": {
     "about": "Sobre mi",
     "projects": "Projectes",
@@ -12,12 +7,14 @@
   },
   "about": {
     "title": "Sobre mi",
-    "projectsLink": "Els meus projectes"
+    "name": "Albert Bonmassip",
+    "role": "Desenvolupador Front-end"
   },
   "projects": {
     "title": "Projectes",
     "clearFilter": "esborra la selecció",
-    "visit": "Visita el web",
+    "visit": "Entra",
+    "code": "Github",
     "noMatch": "No tinc projectes que compleixin aquests requisits"
   },
   "contact": {
@@ -28,7 +25,6 @@
     "submit": "Enviar",
     "sending": "Enviant...",
     "success": "Missatge enviat correctament!",
-    "error": "Error",
-    "top": "Torna a dalt!"
+    "error": "Error"
   }
 }

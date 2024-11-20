@@ -9,4 +9,4 @@ links:
   }
 ---
 
-**`React`** app that detects faces on images using the [Clarifai](https://www.clarifai.com/) API. **`Express.js`** backend server, **`PostgreSQL`** database to register users, **`bcrypt`** to hash passwords safely and **`Tachyons`** for CSS styling.
+**`React`** app that detects faces on images using the Clarifai API. **`Express.js`** backend server, **`PostgreSQL`** database to register users, **`bcrypt`** to hash passwords safely and **`Tachyons`** for CSS styling.
