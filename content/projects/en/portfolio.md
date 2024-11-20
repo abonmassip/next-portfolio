@@ -4,7 +4,7 @@ title: "Portfolio"
 tech: ["React", "Next.js", "i18n"]
 links:
   {
-    code: "https://github.com/abonmassip/abonmassip-portfolio",
+    code: "https://github.com/abonmassip/next-portfolio",
     live: "https://abonmassip.dev/",
   }
 ---
