@@ -1,6 +1,5 @@
 "use client";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
 
 import SocialIcons from "@/components/SocialIcons/SocialIcons";
 
@@ -8,38 +7,18 @@ import styles from "./Contact.module.scss";
 
 export default function Contact() {
   const t = useTranslations("contact");
-  const [result, setResult] = useState("");
-
-  const onSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
-    setResult(t("sending"));
-    const form = event.target as HTMLFormElement;
-    const formData = new FormData(form);
-
-    formData.append("access_key", "d79aa01a-3d47-4d2f-87fa-4635d75963e9");
-
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
-      setResult(t("success"));
-      form.reset();
-    } else {
-      console.log(t("error"), data);
-      setResult(data.message);
-    }
-  };
 
   return (
     <section className={styles.contact} id="contact">
       <h1>{t("title")}</h1>
 
       <div className={styles.formContainer}>
-        <form className={styles.form} onSubmit={onSubmit}>
+        <form
+          className={styles.form}
+          name="contact"
+          method="POST"
+          data-netlify="true"
+        >
           <input type="text" name="name" placeholder={t("name")} required />
           <input type="email" name="email" placeholder={t("email")} required />
           <textarea
@@ -50,7 +29,6 @@ export default function Contact() {
 
           <button type="submit">{t("submit")}</button>
         </form>
-        <span>{result}</span>
       </div>
 
       <div className={styles.footer}>
