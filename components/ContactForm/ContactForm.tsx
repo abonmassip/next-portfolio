@@ -23,7 +23,7 @@ const ContactForm = () => {
       const res = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body,
+        body: body.toString(),
       });
 
       if (res.status === 200) {
@@ -39,10 +39,11 @@ const ContactForm = () => {
   return (
     <>
       <form
-        className={styles.contactForm}
         name="contact"
         onSubmit={handleFormSubmit}
+        className={styles.contactForm}
       >
+        <input type="hidden" name="Portfolio-contact" value="contact" />
         <input type="text" name="name" placeholder={t("name")} required />
         <input type="email" name="email" placeholder={t("email")} required />
         <textarea name="message" placeholder={t("message")} required></textarea>
