@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import SkillsGrid from "./SkillsGrid/SkillsGrid";
+import SkillsGrid from "@/components/SkillsGrid/SkillsGrid";
 import LanguageSwitcher from "@/components/LanguageSwitcher/LanguageSwitcher";
 import SocialIcons from "@/components/SocialIcons/SocialIcons";
 
