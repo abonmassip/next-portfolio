@@ -43,7 +43,7 @@ const ContactForm = () => {
         onSubmit={handleFormSubmit}
         className={styles.contactForm}
       >
-        <input type="hidden" name="Portfolio-contact" value="contact" />
+        <input type="hidden" name="form-name" value="contact" />
         <input type="text" name="name" placeholder={t("name")} required />
         <input type="email" name="email" placeholder={t("email")} required />
         <textarea name="message" placeholder={t("message")} required></textarea>
