@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Link, LocalesType } from "@/i18n/routing";
 import { useLocale } from "next-intl";
 import { useTranslations } from "next-intl";
+import mixpanel from "mixpanel-browser";
 
 import styles from "./Navbar.module.scss";
 
@@ -27,6 +28,8 @@ const Navbar = () => {
 
     if (currentSection !== current) {
       setCurrentSection(current || "");
+      if (currentSection)
+        mixpanel.track("Section View", { section: currentSection });
     }
   }, [currentSection]);
 
@@ -63,6 +66,7 @@ const Navbar = () => {
           className={styles.resume}
           href={`/AlbertBonmassip_CV-${locale}.pdf`}
           target="_blank"
+          onClick={() => mixpanel.track("CV Click", { language: locale })}
         >
           <span className={styles.long}>{t("resume")}</span>
           <span className={styles.short}>CV</span>

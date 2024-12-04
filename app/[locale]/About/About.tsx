@@ -26,7 +26,12 @@ export default function About({ aboutData }: { aboutData: string }) {
 
         <div>
           <div className={styles.avatar}>
-            <Image fill src="/images/profile.jpg" alt="Albert's avatar" />
+            <Image
+              fill
+              src="/images/profile.jpg"
+              alt="Albert's avatar"
+              sizes="(max-width: 1200px) 50vw, 33vw"
+            />
           </div>
         </div>
 
