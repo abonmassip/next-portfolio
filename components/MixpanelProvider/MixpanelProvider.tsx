@@ -5,11 +5,11 @@ import mixpanel from "mixpanel-browser";
 
 export default function MixpanelProvider() {
   useEffect(() => {
-    const token = process.env.MIXPANEL_TOKEN!;
-    mixpanel.init(token, {
-      debug: true,
-      ignore_dnt: true,
-    });
+    if (process.env.MIXPANEL_TOKEN) {
+      mixpanel.init(process.env.MIXPANEL_TOKEN, {
+        ignore_dnt: true,
+      });
+    }
 
     mixpanel.track("Page View", { page: "portfolio" });
   }, []);
