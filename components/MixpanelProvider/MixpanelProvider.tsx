@@ -3,11 +3,13 @@
 import { useEffect } from "react";
 import mixpanel from "mixpanel-browser";
 
-const TOKEN: string = process.env.MIXPANEL_TOKEN || "";
-
 export default function MixpanelProvider() {
   useEffect(() => {
-    mixpanel.init(TOKEN, { debug: true, ignore_dnt: true });
+    const token = process.env.MIXPANEL_TOKEN!;
+    mixpanel.init(token, {
+      debug: true,
+      ignore_dnt: true,
+    });
 
     mixpanel.track("Page View", { page: "portfolio" });
   }, []);
