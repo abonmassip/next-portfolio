@@ -7,7 +7,6 @@ import "@/styles/globals.scss";
 import { LocalesType } from "@/i18n/routing";
 import { Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar/Navbar";
-import MixpanelProvider from "@/components/MixpanelProvider/MixpanelProvider";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -38,7 +37,6 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={montserrat.className}>
         <NextIntlClientProvider messages={messages}>
-          <MixpanelProvider />
           <Navbar />
           {children}
         </NextIntlClientProvider>
